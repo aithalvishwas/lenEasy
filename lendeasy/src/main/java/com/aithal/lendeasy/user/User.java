@@ -30,6 +30,9 @@ public class User {
     @Column(nullable = false)
     private String password; // hashed
 
+    @Column(nullable = false, precision = 10, scale = 2)
+    private java.math.BigDecimal balance = java.math.BigDecimal.ZERO;
+
     public Long getId() {
         return id;
     }
@@ -76,6 +79,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public java.math.BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(java.math.BigDecimal balance) {
+        this.balance = balance;
     }
 }
 
