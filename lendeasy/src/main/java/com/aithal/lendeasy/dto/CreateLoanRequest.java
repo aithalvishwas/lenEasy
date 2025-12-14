@@ -21,7 +21,6 @@ public class CreateLoanRequest {
     @NotBlank(message = "Client name is required")
     private String clientName;
     
-    @NotNull(message = "Loan amount is required")
     @DecimalMin(value = "0.0", inclusive = false, message = "Loan amount must be greater than 0")
     private BigDecimal loanAmount;
     
